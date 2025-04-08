@@ -21,13 +21,12 @@ class FreqStack(object):
 
     def count_value_frequency(self, val):
         """Counts how many times value repeats in stack"""
-        counter = 0
         curr = self.head
         while curr:
             if curr.data == val:
-                counter += 1
+                return curr.count
             curr = curr.next
-        return counter
+        return 0
 
     def pop(self):
         """
